@@ -1,0 +1,46 @@
+﻿@model TagIndexViewModel
+@{
+    ViewData["Title"] = "Tags";
+}
+
+<section class="parallax-window" id="short" data-parallax="scroll" data-image-src="/img/sub_header_short.jpg" data-natural-width="1400" data-natural-height="350">
+    <div id="subheader">
+        <div id="sub_content">
+            <h1>Alle Tags</h1>
+        </div>
+    </div>
+</section>
+
+<div id="position">
+    <div class="container">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li>Tags</li>
+        </ul>
+        <a href="#0" class="search-overlay-menu-btn"><i class="icon-search-6"></i> Suche</a>
+    </div>
+</div>
+
+<div class="container margin_60_35">
+
+    <table width="100%">
+        <thead>
+            <tr>
+                <th>
+                    Tag
+                </th>
+                <th>
+                    Optionen
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var tag in Model.AllTags)
+            {
+                <tr>
+                    <td>@tag.Title</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

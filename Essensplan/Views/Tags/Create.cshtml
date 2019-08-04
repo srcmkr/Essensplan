@@ -1,0 +1,45 @@
+﻿@model TagCreateEditViewModel
+@{
+    ViewData["Title"] = "Create";
+}
+
+<section class="parallax-window" id="short" data-parallax="scroll" data-image-src="/img/sub_header_short.jpg" data-natural-width="1400" data-natural-height="350">
+    <div id="subheader">
+        <div id="sub_content">
+            <h1>Neues Tag</h1>
+        </div>
+    </div>
+</section>
+
+<div id="position">
+    <div class="container">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li>Tag erstellen</li>
+        </ul>
+        <a href="#0" class="search-overlay-menu-btn"><i class="icon-search-6"></i> Suche</a>
+    </div>
+</div>
+
+<div class="container margin_60_35">
+
+    @using (Html.BeginForm())
+    {
+
+        <div class="row">
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    <input type="text" asp-for="Tag.Title" class="form-control">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <input type="submit" value="Speichern" />
+            </div>
+        </div>
+
+    }
+</div>
